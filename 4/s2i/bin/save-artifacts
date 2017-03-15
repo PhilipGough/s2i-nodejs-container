@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# echo ${HOME}  ---> /opt/app-root/src
+
+pushd ${HOME} >/dev/null
+
+if [ -d ./node_modules ]; then
+  tar cf - ./node_modules
+fi
+
+popd >/dev/null
